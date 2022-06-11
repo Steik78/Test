@@ -1,0 +1,413 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+   
+}
+ 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+a{
+  text-decoration: none;
+}
+ul{
+  list-style: none;
+}
+ 
+main{
+  width: 100%;
+  padding-top:80px; /* 159px;*/
+  transition: padding-top 0.5s;
+  z-index: 0; 
+}
+/*========================================
+                Buttons
+========================================*/
+
+/*****Common Styles For Buttons*****/
+.btn{
+  font-size: 13px;
+  color:#212121;
+  background-color: #fff;
+  border:1px solid rgb(221, 221, 221);
+  width: 130px;
+  height: 40px;
+  text-transform: lowercase;
+  font-weight: 300;
+  border-radius: 5px;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+}
+.btn:hover{
+  box-shadow: 0 0 3px rgba(90, 90, 90, 0.7);
+}
+.btn:active{
+  box-shadow: 0 0 20px rgba(90, 90, 90, 0.7); 
+}
+.btn:disabled{
+  cursor: not-allowed;
+  box-shadow: 0 0 0px #8ec7e5;
+  opacity: 0.4;
+}
+
+/*****btn-primary*****/
+.btn-primary{
+  background-color: #0291d3;
+  color:#fff;
+  box-shadow: 0 0 5px #8ec7e5;
+}
+ 
+/*****btn-round*****/
+.btn-round{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 1px solid #787e81;
+  color:#787e81;
+}
+ 
+.btn-round:disabled{
+  cursor: not-allowed;
+  background-color: #c9dbe6;
+}
+.btn-round-active{
+  border:1px solid #03a9f4; 
+}
+.btn-round:hover{
+  box-shadow: 0 0 5px rgba(11, 187, 231, 0.8);
+  border:1px solid #03a9f4
+}
+.btn-round:active{
+  box-shadow: 0 0 20px rgba(11, 187, 231, 0.8);
+}
+/*========================================
+        Component Main Header 
+========================================*/
+
+/*===========Block Main Header============*/
+
+/*****Main Header*****/
+.main-header{
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top:0;
+  width: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+.main-header a{
+  color:#fff;
+  font-size: 16px;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+}
+.main-header a:hover{
+  border-bottom: 2px solid #fff;
+}
+
+/*===========Block Main Navigation============*/
+
+/*****main navigation*****/
+.main-nav{
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  background-color: #212121;
+  width: 100%;
+  z-index: 1;
+}
+/*****wrapper of items(block logo and block control items*****/
+.wrap-items{
+  display: flex;
+  align-items: center;
+  width: 375px;
+}
+/*****block logo*****/
+.logo{
+  width: 170px;
+}
+.logo a{
+  font-size: 26px;
+  font-weight: 700;
+  text-transform: lowercase;
+}
+.logo a:hover{
+  padding-bottom: 0;
+  border-bottom: 0px solid transparent;
+}
+/*****block control-items*****/
+.control-items{
+  display: none;
+  
+}
+.control-items button{
+  background-color: transparent;
+  color:#fff;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0 7px;
+  cursor: pointer;
+}
+.control-items button:last-child{
+  margin-left: 0;
+}
+.message-pointer{
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color:#03a9f4;
+  margin-left: 2px;
+  display: inline-block;
+}
+
+/*****link help*****/
+/*=======See Common Styles For Main Header==========*/
+
+/*****block btn-auth*****/
+.auth{
+  width: 375px;
+  text-align: right;
+  /*display: none;*/
+  display: block;
+}
+.auth a{
+  text-transform: capitalize;
+  margin-left: 20px;
+}
+
+/*****block control-users*****/
+.control-users{
+  /*display: flex;*/
+  align-items: center;
+  display: none;
+}
+.control-users a{
+  margin-right: 30px;
+  text-transform: capitalize;
+}
+ 
+.user{
+  display: flex;
+  align-items: center;
+}
+.user-img{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #eee;
+}
+.user-img img{
+  width: 100%;
+}
+/*===================Block Search=====================*/
+
+/*****block search*****/
+.search{
+  height: 0; 
+  overflow-y: hidden; 
+  width: 100%;
+  background-color: #fff;
+  align-items: center;
+  border-bottom: 1px solid #f3ebeb; 
+  transition: height 0.5s;
+  display: flex;
+  align-items: center;
+  
+}
+
+.show-search{
+  height: 75px;
+
+} 
+ 
+/*****form block search*****/
+.search{
+  z-index: 0;
+  
+}
+.search label{
+  margin-left: 30px;
+  color:#787e81;
+  font-size: 18px;
+  position: relative;
+   
+}
+ 
+.search input{
+  padding: 10px 0 10px 10px;
+  width: 300px;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  
+}
+.search input::placeholder{
+  font-size: 20px;
+  text-transform: lowercase;
+  color:#212121
+}
+/*========================================
+          Component Content
+========================================*/
+
+/*==================Block Header Content======================*/
+
+/*****header content*****/              
+.header-content{
+  width: 100%;
+   
+}
+.title{
+  text-align: center;
+  font-size: 26px;
+  font-weight: 700;
+  text-transform: lowercase;
+  padding: 30px 0;
+}
+hr{
+  border: 1px solid #dddddd;
+} 
+/*===================Block Container Content=====================*/
+
+/*****container content*****/
+.container-content{
+  position: relative;
+  padding-bottom: 30px;
+  min-height: 100%; 
+}
+/*========================================
+          Component Slider
+========================================*/
+
+/*=================Block container slider====================*/
+
+/*****container slider*****/
+.slider-container{
+  max-width: 1000px;
+  height: 542px;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 40px; 
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+}
+/*****slide content*****/
+.slides{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;  
+   
+}
+.slide{
+  position: relative;
+  top:0;
+  left: 0;
+  min-width: 100%;
+  margin: 0 auto;
+  height: 100%;  
+  text-align: center;
+  overflow: hidden;  
+  padding-bottom: 20px;
+}
+.slide-content{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between; 
+  text-align: justify;
+  margin: 80px 0;
+}
+.slide-content p{
+  line-height: 2;
+  font-size: 16px;
+  color:#212121;
+  margin: 0 40px;
+}
+.list{
+  list-style: none;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap; 
+}
+li.list-item{
+  max-width: 50%;
+  height: auto;
+  padding: 20px;
+}
+li.list-item p{
+  margin: 0;
+}
+li.list-item i{
+  font-size: 24px;
+} 
+
+/*****buttons of slider*****/
+.slider-container .btn-round{
+  background-color: #fff;
+} 
+.slider-container .btn-round i{
+  font-size: 16px;
+}
+.prev{
+  position: fixed;
+  left:10px;
+  top:45%;
+}
+.next{
+  position: fixed;
+  right:10px;
+  top:45%;
+}
+/*========================================
+          Component Main Footer
+========================================*/
+
+/*===============Block Footer================*/
+/*****footer container*****/
+.main-footer{
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background-color: #f4f4f4;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+}
+/*****footer content*****/
+.main-footer a{
+  color:#212121
+}
+.contact{
+  width: 130px;
+}
+.contacts-social a{
+  margin: 0 8px;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 1340px) {
+  .navigation-dashboard nav{
+    flex-basis: 100%;
+     
+  }
+  .wrap-nav{
+    padding: 20px 0;
+    flex-basis: 100%;
+    background-color: #f1f1f1;
+  }
+  main{
+    padding-top: 239px;
+  }
+}

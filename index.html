@@ -11,9 +11,108 @@
   <title>Trinity-App</title>
 </head>
 <body>
-  <header class="main-header"></header>
-  <main></main>
-  <footer class="main-footer"></footer>
+  <header class="main-header">
+    <section class="main-nav"> 
+      <div class="wrap-items"> 
+        <div class="logo"><a href="#">Trinity</a></div>
+        <div class="control-items">
+          <button type="button" id="btn-search"><i class="fa fa-search"></i></button>
+          <button type="button" id="btn-notification"><i class="fa fa-bell-o"></i><span class="message-pointer"></span></button>
+          <button type="button" id="btn-settings"><i class="fa fa-cogs"></i></i></button>
+        </div>
+      </div>
+      <div class="help"><a href="#">Help</a></div>
+      <div class="auth">
+        <a href="#" id="link-register">New account</a>
+        <a href="#" id="link-login">Login</a>
+      </div>
+      <div class="control-users">
+        <a href="#">Invite people</a>
+        <a href="#"><span class="count-members">10</span>Members</a>
+        <div class="user">
+          <a href="#">Jack M.</a>
+          <div class="user-img">
+            <img src="./images/user.png" alt="#">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="search" style="height:0px">
+      <label for="search"><i class="fa fa-search"></i>
+        <input type="search" id="search" placeholder="Search">
+      </label>
+    </section>
+  </header>
+  <main>
+    <section class="container-content"> 
+      <section class="header-content">
+        <h2 class="title">hey friends</h2>
+        <hr>
+      </section> 
+      <section class="slider-container" >       
+        <button class="prev btn-round" disabled><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
+        <button class="next btn-round" ><i class="fa fa-arrow-right" aria-hidden="true"></i></button> 
+        <ul class="slides">
+            <li class="slide " style="transition: left 500ms ease-in-out 0s; display: list-item;">    
+              <div class="slide-content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis veniam architecto modi cum ad doloremque, recusandae excepturi blanditiis dignissimos tenetur, voluptatibus atque odio ipsum quas quam pariatur, nostrum eius. Praesentium, magnam iure tenetur cumque mollitia dolorem quaerat!  </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores cum est quam reprehenderit deserunt dolorem repudiandae aspernatur, amet quod dolor mollitia non voluptatum tenetur ducimus maxime minima accusamus fugiat doloribus veritatis magnam porro nisi? </p>
+              </div>
+              <button class="btn btn-primary btn-to-register"  >New account</button>
+            </li>  
+            <li class="slide" style="transition: left 500ms ease-in-out 0s; display: none; left: 920px;">
+              <div class="slide-content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis veniam architecto modi cum ad doloremque, recusandae excepturi blanditiis dignissimos tenetur, voluptatibus atque odio ipsum quas quam pariatur, nostrum eius. Praesentium, magnam iure tenetur cumque mollitia dolorem quaerat! Omnis harum maiores rerum pariatur. Expedita ipsam in perspiciatis, doloremque hic ab exercitationem.</p>
+              </div>
+              <button class="btn btn-primary btn-to-register"  >New account</button> 
+            </li>
+            <li class="slide"  style="transition: left 500ms ease-in-out 0s; display: none; left:920px;">
+              <div class="slide-content">
+                <ul class="list">
+                  <li class="list-item">
+                    <p><i class="fa fa-diamond" aria-hidden="true"></i></p>
+                    <h3 class="slide-content-title">
+                      Lorem, ipsum.
+                    </h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic ad similique repudiandae quidem consequatur iure officia, temporibus laudantium accusamus nam.</p>
+                  </li>
+                  <li class="list-item">
+                    <p><i class="fa fa-balance-scale" aria-hidden="true"></i></p>
+                    <h3 class="slide-content-title">
+                      Lorem, ipsum.
+                    </h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic ad similique repudiandae quidem consequatur iure officia, temporibus laudantium accusamus nam.</p>
+                  </li>
+                  <li class="list-item">
+                    <p><i class="fa fa-database" aria-hidden="true"></i></p>
+                    <h3 class="slide-content-title">
+                      Lorem, ipsum.
+                    </h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic ad similique repudiandae quidem consequatur iure officia, temporibus laudantium accusamus nam.</p>
+                  </li>
+                  <li class="list-item">
+                    <p><i class="fa fa-key" aria-hidden="true"></i></p>
+                    <h3 class="slide-content-title">
+                      Lorem, ipsum.
+                    </h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic ad similique repudiandae quidem consequatur iure officia, temporibus laudantium accusamus nam.</p>
+                  </li>
+                </ul>  
+              </div>
+            </li> 
+        </ul> 
+        </section>   
+    </section>
+  </main>
+  <footer class="main-footer">
+    <div class="contact"><a href="#">Contact</a></div>
+    <div class="contacts-social">
+      <a href="#"><i class="fa fa-facebook"></i></a>
+      <a href="#"><i class="fa fa-linkedin"></i></a>
+      <a href="#"><i class="fa fa-twitter"></i></a>
+    </div>
+    <div><a href="mailto: trinity@mail.com">trinity@gmail.com</a></div>
+  </footer>
   <!--connect scripts-->
   <script src="script.js"></script>
 </body>
