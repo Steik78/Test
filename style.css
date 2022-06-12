@@ -81,6 +81,43 @@ main{
 .btn-round:active{
   box-shadow: 0 0 20px rgba(11, 187, 231, 0.8);
 }
+
+/*========================================
+                 Forms
+========================================*/
+
+ /*****Common Styles For Forms*****/
+ form label{
+  font-size: 15px;
+  text-transform: lowercase;
+  font-weight: 700;
+  text-align: left;
+  color:#212121;
+}
+form input{
+  border: 1px solid rgba(139, 139, 139, 0.7);
+  border-radius: 5px;
+  font-size: 16px;
+}
+form input:focus, form textarea:focus{
+  border: 1px solid #03a9f4;
+  outline: 1px solid #03a9f4;
+}
+form input:not(:placeholder-shown):invalid, form textarea:not(:placeholder-shown):invalid{
+  border: 1px solid #fc4242;
+  outline: 1px solid #fc4242;
+}
+form input:valid, form textarea:valid{
+  border: 1px solid #25992f;
+  outline: 1px solid #25992f;
+}
+form textarea{
+  border-radius: 3px;
+}
+form input[type="radio"]{
+  border: none;
+  outline: none;
+}
 /*========================================
         Component Main Header 
 ========================================*/
@@ -366,6 +403,185 @@ li.list-item i{
   position: fixed;
   right:10px;
   top:45%;
+}
+/*========================================
+    Component Login and Registration
+========================================*/
+
+/*****Forms login and registration*****/
+.form-auth{
+  max-width: 425px;
+  margin: 20px auto;
+  height: auto;
+  padding: 10px;
+  text-align: center;
+}
+.form-auth label, .form-auth input, .form-auth a{
+  display: block;
+}
+.form-auth label{
+  margin-bottom: 20px;
+}
+.form-auth input{
+  margin-top: 10px;
+  width: 100%;
+  padding: 10px 15px;
+ 
+}
+.form-auth input[type="password"]::-webkit-input-placeholder{
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+.form-auth input[type="password"]{
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+.form-auth a{
+  text-align: left;
+  text-transform: capitalize;
+  font-size: 14px;
+  color:#212121;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.form-auth a:hover{
+  color: #03a9f4;
+}
+.form-auth button{
+  margin-bottom: 30px;
+}
+
+/*****form message*****/
+.container-message{
+  height: 40px;
+  width: 400px;
+  margin: 0 auto 30px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+}
+.container-message p{ 
+  font-size: 18px;
+}
+.success{ 
+  box-shadow: 0 0 5px rgba(55, 231, 11, 0.8);
+  color: #25992f;
+  animation: show-message .8s; 
+} 
+@keyframes show-message{
+  from{ opacity: 0;}
+  to{ opacity: 1;}
+}
+.error{
+  box-shadow: 0 0 5px rgba(231, 18, 11, 0.8);
+  color: #992925;
+  animation: show-message .8s;
+}
+/*========================================
+          Component Contacts
+========================================*/
+
+/*=================Block contacts=================*/
+
+/*****container contacts*****/
+.contacts{
+  margin-top: 50px;
+  text-align: center;
+}
+/*****content contacts*****/
+.contacts a{
+  display: block;
+  margin: 10px 0;
+}
+.contacts a:first-child{
+  color: #03a9f4;
+  font-size: 18px;
+}
+.contacts a:nth-child(2){
+  font-size: 26px;
+  color:#212121;
+}
+.contacts button{
+  margin:20px 0;
+}
+.map{
+  margin: 20px auto;
+  width: 400px;
+  height: 200px;
+}
+.map iframe{
+  width: 100%;
+  height: 100%;
+}
+/*========================================
+            Component Help  
+========================================*/
+
+/*=================Block Help Accordion==================*/
+table,td{
+  border: 1px solid #f4f4f4;
+}
+table{
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0 auto;
+}
+table tr:hover{
+  background-color: #f9f9f9;
+}
+td{
+  padding: 15px;
+  border-left: none;
+  border-right: none;
+  color:#212121
+}
+.content-active{
+  background-color: #f4f4f4;
+} 
+tr:nth-child(odd) td:first-child{
+   width: 40%;
+}
+tr:nth-child(odd) td:nth-child(2),
+tr:nth-child(odd) td:nth-child(3),
+tr:nth-child(odd) td:nth-child(4){
+  width: 20%;
+}
+tr:nth-child(odd) td:nth-child(2),
+tr:nth-child(odd) td:nth-child(3){
+  text-align: center;
+}
+tr:nth-child(odd) td:nth-child(4){
+  text-align: right;
+}
+tr:nth-child(odd) td:nth-child(2){
+  color:#03a9f4;
+   
+}
+tr:nth-child(even){
+  display: none; 
+  width: 100%;
+  position: relative;
+  animation: show-content .7s  ease-in;
+  z-index: 1;
+}
+@keyframes show-content {
+  from{opacity: 0;}
+  to{opacity: 1;}
+}
+tr:nth-child(even) td{
+  padding-left: 60px;
+  padding-right: 60px;
+  width: auto;
+}
+ 
+td span{
+  display: block;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  font-size: 23px;
+  width: 830px; 
 }
 /*========================================
           Component Main Footer
